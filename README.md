@@ -1,6 +1,6 @@
 # inventoryMS
 
-1. Inventory Management System (SECTION 04)
+Inventory Management System (SECTION 04)
 1. Dashboard
 •	Summary Overview: Displays a quick summary of total stock levels and product categories. (ABEJO, JUNEY) 
 •	Recent Orders: Showcases recent orders received and dispatched. (BADANGO, KIM NIÑO )
