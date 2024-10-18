@@ -1,0 +1,97 @@
+<?php
+
+$host = 'localhost';
+$db = 'recent_order';
+$user = 'root';
+$pass = '';
+
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+
+
+$sql = "SELECT id, customer_name,order_name, order_date, status FROM kim ORDER BY order_date DESC LIMIT 10";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Orders Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        th {
+            
+            background-color: #006400;
+            color: white;
+        }
+        th, td {
+            text-align: center;
+            padding: 12px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recent Orders</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer Name</th>
+                    <th>Order</th>
+                    <th>Order Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>    
+            <tbody>
+                <?php if ($result->num_rows > 0): ?>
+                    <?php while ($row = $result->fetch_assoc()): ?>
+                        <tr>
+                            <td><?php echo $row['id']; ?></td>
+                            <td><?php echo htmlspecialchars($row['customer_name']); ?></td>
+                            <td><?php echo htmlspecialchars($row['order_name']); ?></td>
+                            <td><?php echo date('Y-m-d H:i:s', strtotime($row['order_date'])); ?></td>
+                            <td><?php echo htmlspecialchars($row['status']); ?></td>
+                        </tr>
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="4" class="text-center">No recent orders found.</td>
+                    </tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
