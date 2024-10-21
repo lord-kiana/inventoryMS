@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Query to get order details
-$sql = "SELECT order_id, supplier_name, order_date, item_name, quantity, order_type, status, created_at FROM orders"; // Replace 'orders' with your actual table name
+$sql = "SELECT order_id, supplier_name, order_date, item_name, quantity, order_type, status, created_at FROM orders"; 
 $result = $conn->query($sql);
 
 function loadNavbar() {
@@ -26,10 +26,9 @@ function loadNavbar() {
     }
 }
 
-// Call the function
+// Call the function to load navbar
 loadNavbar();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,15 +55,21 @@ loadNavbar();
         .table-hover tbody tr:hover {
             background-color: #f1f1f1;
         }
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
 
- 
-
-
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Outgoing Orders</h2>
+    <div class="action-buttons">
+        <h2>Outgoing Orders</h2>
+        <a href="returns_list.php" class="btn btn-info">View Returns List</a>
+    </div>
+    
     <table class="table table-hover table-bordered">
         <thead class="table-dark">
             <tr>
@@ -81,9 +86,7 @@ loadNavbar();
         </thead>
         <tbody>
             <?php
-            // Check if there are results
             if ($result->num_rows > 0) {
-                // Output data for each row
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>" . $row["order_id"] . "</td>";

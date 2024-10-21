@@ -64,13 +64,10 @@
                     <i class="bi bi-bell"></i> Notification
                 </a>
                 <a href="modules/products/products.php" class="btn btn-warning side-link">
-                    <i class="bi bi-item-list"></i> Products
+                    <i class="bi bi-phone"></i> Products
                 </a>
                 <a href="modules/orders/orders.php" class="btn btn-warning side-link">
                     <i class="bi bi-receipt"></i> Orders
-                </a>
-                <a href="modules/returns/returns.php" class="btn btn-warning side-link">
-                    <i class="bi bi-arrow-return-left"></i> Returns
                 </a>
                 <a href="modules/dashboard/dashboard.php" class="btn btn-warning side-link">
                     <i class="bi bi-boxes"></i> Stock

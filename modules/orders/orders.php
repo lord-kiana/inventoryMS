@@ -65,6 +65,13 @@ loadNavbar();
 
 <div class="container mt-5">
     <h2 class="text-center mb-4">Order Inventory</h2>
+
+    <div class="container mt-5">
+    <div class="action-buttons">
+        <h2>Outgoing Orders</h2>
+        <a href="../returns/returns_list.php" class="btn btn-info">View Returns List</a>
+    </div>
+
     <table class="table table-hover table-bordered">
         <thead class="table-dark">
             <tr>
@@ -96,7 +103,7 @@ loadNavbar();
                     echo "<td>" . $row["created_at"] . "</td>";
                     echo "<td>
                         <a href='edit.php?id=" . $row["order_id"] . "' class='btn btn-warning btn-sm'>Edit</a>
-       
+                        <a href='return_form.php?id=" . $row["order_id"] . "' class='btn btn-warning btn-sm'>Process Return</a>
                         <a href='delete.php?id=" . $row["order_id"] . "' class='btn btn-danger btn-sm'>Archive</a>
                     </td>";
                     echo "</tr>";
