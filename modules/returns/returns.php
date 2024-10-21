@@ -95,8 +95,7 @@ loadNavbar();
                     echo "<td>" . $row["status"] . "</td>";
                     echo "<td>" . $row["created_at"] . "</td>";
                     echo "<td>
-                        <a href='edit.php?id=" . $row["order_id"] . "' class='btn btn-warning btn-sm'>Return</a>
-       
+                        <a href='return_form.php?id=" . $row["order_id"] . "' class='btn btn-warning btn-sm'>Process Return</a>
                         <a href='delete.php?id=" . $row["order_id"] . "' class='btn btn-danger btn-sm'>Archive</a>
                     </td>";
                     echo "</tr>";
