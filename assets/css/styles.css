@@ -1,0 +1,269 @@
+/* Chart Styles */
+.chart {
+    display: flex;
+    align-items: flex-end; /* Align bars at the bottom */
+    margin: 20px 0;
+    height: 300px; /* Set a fixed height for the chart */
+    border-left: 2px solid #000; /* Left border */
+    border-bottom: 2px solid #000; /* Bottom border */
+    border-radius: 10px; /* Rounded corners for charts */
+    background: #fff; /* White background for charts */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the chart */
+}
+
+/* Chart Title */
+.chart-title {
+    font-size: 28px; /* Larger font size for chart titles */
+    text-align: center; /* Centered title */
+    margin-bottom: 15px; /* Space below titles */
+    color: #333; /* Darker color for better readability */
+}
+
+/* Chart Legend Styles */
+.chart-legend {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space out legend items */
+    margin-top: 10px; /* Space above the legend */
+}
+
+/* Legend Item */
+.legend-item {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+/* Legend Color Box */
+.legend-color {
+    width: 15px; /* Box width */
+    height: 15px; /* Box height */
+    margin-right: 5px; /* Space between box and text */
+}
+
+/* Legend Text */
+.legend-text {
+    font-size: 14px; /* Smaller font for legend */
+    color: #555; /* Slightly lighter color */
+}
+
+/* Bar Styles */
+.bar {
+    width: 50px; /* Width of each bar */
+    margin: 0 10px; /* Spacing between bars */
+    background-color: #007bff; /* Bar color */
+    text-align: center; /* Center text in bars */
+    color: white; /* Text color */
+    font-weight: bold;
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.bar:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+.label {
+    margin-top: 5px; /* Space between bar and label */
+    text-align: center; /* Center labels below bars */
+}
+
+/* Title Styles */
+.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #343a40, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 50px 0; /* Increased margin for more space */
+    padding: 20px 0; /* Increased padding */
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for depth */
+    color: white;
+    padding: 20px 0; /* Increased padding */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow for more 3D effect */
+    font-family: 'Arial', sans-serif;
+    font-size: 24px; /* Increased font size */
+    text-align: center;
+    border-bottom: 4px solid #0056b3; /* Darker bottom border for separation */
+    transition: background-color 0.3s ease; /* Smooth transition for background change */
+}
+
+.nav-heading {
+    font-size: 20px; /* Increased font size */
+    font-weight: bold; /* Bold font for emphasis */
+    color: #ffffff; /* White text color for contrast */
+    padding: 12px 15px; /* Padding for spacing around the text */
+    background-color: #007bff; /* Background color for heading */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Increased space below the heading */
+    text-transform: uppercase; /* Uppercase text for a uniform look */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #1a1a2e; /* Dark background for contrast */
+    position: fixed;
+    top: 80px; /* Increased top position to avoid conflict with header */
+    left: 0;
+    bottom: 0;
+    width: 250px; /* Sidebar width */
+    padding-top: 30px; /* Increased padding at the top */
+    z-index: 999; /* Stay on top */
+    transition: all 0.3s ease;
+    box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Adjusting the main content */
+.main-content {
+    margin-left: 250px; /* Sidebar width */
+    padding: 30px; /* Increased padding */
+    margin-top: 80px; /* Adjusted for header height */
+}
+
+.sidebar .navbar-brand {
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    color: #fff; /* White text color */
+    text-align: center;
+}
+
+/* List Group Item (Sidebar Link) */
+.list-group-item {
+    cursor: pointer;
+    color: #dcdde1; /* Light gray text */
+    background-color: #1a1a2e; /* Same dark background as sidebar */
+    font-size: 20px; /* Larger font */
+    padding: 15px 25px; /* Increased padding */
+    text-align: left;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none; /* Clean look */
+}
+
+.list-group-item i {
+    margin-right: 15px; /* Space for icons */
+    font-size: 22px; /* Increased icon size */
+}
+
+.list-group-item:hover {
+    background-color: #0f3460; /* Hover state with darker shade */
+    color: #fff;
+    transform: translateX(5px); /* Slight shift on hover */
+}
+
+.list-group-item.active {
+    background-color: #e94560; /* Bright color for active item */
+    color: #fff;
+    font-weight: bold;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
+/* Container Custom */
+.container-custom {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Content Area */
+.content-area {
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px; /* Increased padding */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 20px auto; /* Center the content area horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Allows scrolling if content exceeds the container size */
+}
+
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .content-area {
+        padding: 20px; /* Reduced padding for smaller screens */
+        width: 95%; /* Slightly narrower on smaller screens */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Match footer with header color */
+    color: white; /* White text for contrast */
+    padding: 25px 0; /* Increased padding */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    margin-top: 30px; /* Margin to separate from content */
+}
+
+footer a {
+    color: #ffc107; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffd700; /* Hover color */
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px; /* Increased font size */
+}
+
+@media (max-width: 768px) {
+    .container-custom {
+        padding: 15px;
+    }
+
+    .content-area {
+        padding: 20px;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove margin for mobile */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for mobile */
+        position: relative;
+        top: 0;
+        height: auto;
+        padding-bottom: 10px;
+    }
+}
+
+/* Card Styles */
+.card {
+    margin-bottom: 30px; /* Space between cards */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f7f9fc; /* Light background */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+}
